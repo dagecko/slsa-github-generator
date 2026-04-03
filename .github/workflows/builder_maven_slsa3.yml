@@ -67,7 +67,7 @@ jobs:
     steps:
       - name: Generate the token
         id: generate
-        uses: slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main
+        uses: slsa-framework/slsa-github-generator/actions/delegator/setup-generic@4d014fae4dbd39eb09e8d40348b73db095e6ba9a # main
         with:
           slsa-workflow-recipient: "delegator_lowperms-generic_slsa3.yml"
           slsa-rekor-log-public: "${{ inputs.rekor-log-public }}"
@@ -81,7 +81,7 @@ jobs:
       id-token: write # For signing.
       contents: read # For asset uploads.
       actions: read # For the entrypoint.
-    uses: slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main
+    uses: slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@4d014fae4dbd39eb09e8d40348b73db095e6ba9a # main
     with:
       slsa-token: "${{ needs.slsa-setup.outputs.slsa-token }}"
 

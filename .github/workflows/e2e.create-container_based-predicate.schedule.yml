@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Detect the builder ref
         id: detect
-        uses: slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main
+        uses: slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@4d014fae4dbd39eb09e8d40348b73db095e6ba9a # main
       - name: Update the build definition
         # We use a build definition hard-coded in testadata. To ensure validation against
         # workflow context, we must update the source references.
